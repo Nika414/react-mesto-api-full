@@ -22,14 +22,14 @@ const {
   login, createUser,
 } = require('./controllers/users');
 
-const allowedOrigins = [
-  'https://mmesto.nomoredomains.club',
-  'http://mmesto.nomoredomains.club',
-  'http://api.mmesto.nomoredomains.club',
-  'https://api.mmesto.nomoredomains.club',
-  'http://localhost:3000',
-  'http://localhost:3001',
-];
+// const allowedOrigins = [
+//   'https://mmesto.nomoredomains.club',
+//   'http://mmesto.nomoredomains.club',
+//   'http://api.mmesto.nomoredomains.club',
+//   'https://api.mmesto.nomoredomains.club',
+//   'http://localhost:3000',
+//   'http://localhost:3001',
+// ];
 
 process.on('uncaughtException', (err, origin) => {
   console.log(`message: ${origin} ${err.name} c текстом ${err.message} не была обработана. Обратите внимание!`);
@@ -41,7 +41,7 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {}, () => {
 
 app.use(cors(
   {
-    origin: allowedOrigins,
+    origin: '*',
     allowedHeaders: ['Content-Type', 'Authorization'],
   },
 ));
