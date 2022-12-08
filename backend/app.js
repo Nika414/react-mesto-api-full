@@ -23,10 +23,10 @@ const {
 } = require('./controllers/users');
 
 const allowedOrigins = [
-  'https://mmesto.nomoredomains.club/',
-  'http://mmesto.nomoredomains.club/',
-  'http://api.mmesto.nomoredomains.club/',
-  'https://api.mmesto.nomoredomains.club/',
+  'https://mmesto.nomoredomains.club',
+  'http://mmesto.nomoredomains.club',
+  'http://api.mmesto.nomoredomains.club',
+  'https://api.mmesto.nomoredomains.club',
   'http://localhost:3000',
   'http://localhost:3001',
 ];
