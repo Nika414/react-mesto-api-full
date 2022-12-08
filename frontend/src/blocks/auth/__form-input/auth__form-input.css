@@ -1,0 +1,27 @@
+.auth__form-input {
+  width: 358px;
+  border: none;
+  border-bottom: 2px solid #cccccc;
+  background-color: black;
+  color: white;
+  margin: 0 0 30px 0;
+}
+
+.auth__form-input::placeholder {
+  width: 358px;
+  height: 14px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #cccccc;
+  margin: 0 0 13px 0;
+}
+
+@media screen and (max-width: 400px) {
+  .auth__form-input {
+    width: 260px;
+    padding: 0;
+  }
+}

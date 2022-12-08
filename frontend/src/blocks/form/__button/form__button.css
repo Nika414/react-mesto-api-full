@@ -1,0 +1,34 @@
+.form__button {
+    width: 358px;
+    height: 50px;
+    background: #000000;
+    border-radius: 2px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 46px 0 37px 0;
+    box-sizing: border-box;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form__button:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  
+  @media screen and (max-width:550px) {
+    .form__button {
+      width: 238px;
+      height: 46px;
+      font-size: 14px;
+      line-height: 17px;
+      margin: 43px 0 25px 0;
+    }
+  }

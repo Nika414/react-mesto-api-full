@@ -1,0 +1,13 @@
+.header__login-info {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+@media screen and (max-width:560px) {
+    .header__login-info {
+        display: none;
+    }
+}
+

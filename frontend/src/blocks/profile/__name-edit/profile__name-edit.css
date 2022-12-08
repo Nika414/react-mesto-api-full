@@ -1,0 +1,23 @@
+.profile__name-edit {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width:940px) {
+  .profile__name-edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .profile__name-edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+  }
+}

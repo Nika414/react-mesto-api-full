@@ -1,0 +1,17 @@
+.photo-cards__photo-title {
+  padding: 0;
+  max-width: 198px;
+  max-height: fit-content;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  color: #000000;
+  margin: 25px auto 31px 21px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  border: none;
+  line-height: 29px;
+  letter-spacing: 0em;
+}

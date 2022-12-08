@@ -1,0 +1,10 @@
+.photo-cards__bin {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.photo-cards__bin:hover {
+  opacity: 0.5;
+}
