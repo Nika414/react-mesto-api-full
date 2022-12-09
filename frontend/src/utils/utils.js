@@ -1,5 +1,5 @@
 export const options = {
-    baseUrl: 'http://api.mmesto.nomoredomains.club/',
+    baseUrl: 'https://api.mmesto.nomoredomains.club/',
     body: {
     }
 };
