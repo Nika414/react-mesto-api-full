@@ -1,4 +1,4 @@
-import {options} from './utils.js'
+
 
 export class Api {
     constructor(options, jwt) {
@@ -14,14 +14,14 @@ export class Api {
         throw new Error('Произошла ошибка!');
     }
 
-    getCardsInfo(jwt) {
+    getCardsInfo() {
         return fetch(`${this._baseUrl}${'cards'}`, {
             headers: this._headers,
         })
             .then((res) => this._handleResponse(res));
     }
 
-    getProfileInfo(jwt) {
+    getProfileInfo() {
         return fetch(`${this._baseUrl}${'users/me'}`, {
             headers: this._headers,
         })
@@ -87,9 +87,8 @@ export class Api {
             .then((res) => this._handleResponse(res));
     }
 }
-const jwt = localStorage.getItem("jwt");
-const api = new Api(options, jwt);
 
 
 
-export default api;
+
+export default Api;

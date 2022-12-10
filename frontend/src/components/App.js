@@ -5,7 +5,8 @@ import Footer from "./Footer";
 import PopupWithForm from "./PopupWithForm";
 import ImagePopup from "./ImagePopup";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import api from "../utils/api.js";
+import Api from "../utils/api.js";
+import { options } from '../utils/utils.js'
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
@@ -32,7 +33,8 @@ function App() {
   const [isDeleteCardPopupOpen, setIsDeleteCardPopupOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
-  const jwt = localStorage.getItem("jwt");
+  const jwt = localStorage.getItem('jwt');
+  const api = new Api(options, jwt);
 
   useEffect(() => {
     if (jwt) {
@@ -66,15 +68,22 @@ function App() {
   const tokenCheck = () => {
     if (!jwt) return;
     getContent(jwt)
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status === 401) {
+          history.push("/sign-in");
+          throw new Error('Необходимо авторизироваться');
+        } else { return res.json() }
+      })
       .then((data) => {
         setLoggedIn(true);
         history.push("/");
         setEmail(data.email);
-      })
+      }
+      )
       .catch((error) => {
         console.log(error);
       });
+
   };
 
   function handleLogout() {

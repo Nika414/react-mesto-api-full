@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.mmesto.nomoredomains.club/';
+export const BASE_URL = 'http://localhost:3000/';
 
 export const registerApi = (password, email) => {
     return fetch(`${BASE_URL}signup`, {
@@ -34,3 +34,4 @@ export const getContent =(jwt) => {
         }
     })     
 }; 
+
