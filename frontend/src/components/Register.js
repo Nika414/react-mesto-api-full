@@ -64,11 +64,6 @@ export default function Register({ onRegister }) {
                 value: 6,
                 message: "Минимум 6 символов",
               },
-              pattern: {
-                value: /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/,
-                message:
-                  "Пароль должен содержать минимум 1 цифру и минимум 1 специальный символ",
-              },
             })}
             name="password"
             className="registration__form-input auth__form-input"
