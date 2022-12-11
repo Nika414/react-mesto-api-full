@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nika414/express-mesto-gha.git"
+    "url": "git+https://github.com/Nika414/react-mesto-api-full.git"
   },
   "author": "Veronica Paist",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Nika414/express-mesto-gha/issues"
+    "url": "https://github.com/Nika414/react-mesto-api-full/issues"
   },
-  "homepage": "https://github.com/Nika414/express-mesto-gha#readme",
+  "homepage": "https://github.com/Nika414/react-mesto-api-full#readme",
   "devDependencies": {
     "eslint": "^8.26.0",
     "eslint-config-airbnb-base": "^15.0.0",
