@@ -57,7 +57,7 @@ app.get('/crash-test', () => {
   }, 0);
 });
 
-app.post('', celebrate({
+app.post('/signup', celebrate({
   [Segments.BODY]: Joi.object().keys({
     name: infoTextSchema,
     about: infoTextSchema,
