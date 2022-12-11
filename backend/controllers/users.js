@@ -107,7 +107,6 @@ module.exports.getCurrentUser = (req, res, next) => {
 };
 
 module.exports.login = (req, res, next) => {
-  console.log(JWT_SECRET);
   const { email, password } = req.body;
   return User.findUserByCredentials(email, password)
     .then((user) => {
@@ -117,6 +116,7 @@ module.exports.login = (req, res, next) => {
         { expiresIn: '7d' },
       );
       res.send({ id: user._id, token });
+      console.log(JWT_SECRET);
     })
     .catch(next);
 };
