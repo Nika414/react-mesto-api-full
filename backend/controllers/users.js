@@ -116,7 +116,6 @@ module.exports.login = (req, res, next) => {
         { expiresIn: '7d' },
       );
       res.send({ id: user._id, token });
-      console.log(JWT_SECRET);
     })
     .catch(next);
 };
