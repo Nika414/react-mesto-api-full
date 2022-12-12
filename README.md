@@ -24,15 +24,15 @@ Backend:
 ![image](https://github.com/Nika414/mesto/blob/main/Preview_edit%20profile.gif)
 
 ## Установка и запуск
-Требования:
+### Требования:
 
 Node.js >= 14;
 npm >= 6.14;
 
-Директория Backend:
+### Директория Backend:
 * `npm i` - установка зависимостей;
 * `npm run start` - запуск сервера;
 
-Директория Frontend:
+### Директория Frontend:
 * `npm i` - установка зависимостей;
 * `npm run start` - запуск;
