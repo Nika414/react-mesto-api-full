@@ -1,5 +1,5 @@
-# Веб-приложение: Mesto (JS)
-### [http://mmesto.nomoredomains.club/](https://mmesto.nomoredomains.club/);
+# Веб-приложение: Mesto
+### [http://mmesto.nomoredomains.club/](https://mmesto.nomoredomains.club/)
 Веб-сервис для обмена фотографиями красивых мест.
 Пользователи могут добавлять новые фотографии мест, лайкать, удалять фото, редактировать информацию о себе, изменять фото профиля.
 Для просмотра ленты необходимо зарегистрироваться.
@@ -13,3 +13,8 @@
 Изменение информации профиля
 
 ![image](https://github.com/Nika414/mesto/blob/main/Preview_edit%20profile.gif)
+
+**Использованные технологии**
+* HTML
+* CSS (адаптивная верстка)
+* JavaScript (ООП, валидация форм, REST API)
