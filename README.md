@@ -13,7 +13,7 @@ Backend:
 * Node.js, express, MongoDB + Mongoose, Валидация Celebrate+Joi
 
 
-### Скринкаст функциональности
+## Скринкаст функциональности
 
 Добавление новой карточки места
 
@@ -23,7 +23,7 @@ Backend:
 
 ![image](https://github.com/Nika414/mesto/blob/main/Preview_edit%20profile.gif)
 
-### Установка и запуск
+## Установка и запуск
 Требования:
 
 Node.js >= 14;
@@ -36,5 +36,3 @@ npm >= 6.14;
 Директория Frontend:
 * `npm i` - установка зависимостей;
 * `npm run start` - запуск;
-
-
