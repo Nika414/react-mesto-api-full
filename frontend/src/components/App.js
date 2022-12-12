@@ -27,11 +27,13 @@ function App() {
   const [selectedCard, setSelectedCard] = useState({});
   const [loggedIn, setLoggedIn] = useState(false);
   const [isInfoTooltipOpen, setIsInfoTooltipOpen] = useState(false);
-  const [isSubmitSucceed, setIsSubmitSucceed] = useState(true);
+  const [isAuthSubmitSucceed, setIsAuthSubmitSucceed] = useState(true);
   const [email, setEmail] = useState();
   const [cardForDelete, setCardForDelete] = useState({});
   const [isDeleteCardPopupOpen, setIsDeleteCardPopupOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoginSucceed, setIsLoginSuceed] = useState(true);
+
   const history = useHistory();
   const jwt = localStorage.getItem('jwt');
   const api = new Api(options, jwt);
@@ -54,8 +56,9 @@ function App() {
     loginApi(password, email)
       .then((res) => res.json())
       .then((res) => {
-        if (!res.token) throw new Error("Missing jwt");
+        if (!res.token) {setIsLoginSuceed(false); throw new Error("Missing jwt"); }
         localStorage.setItem("jwt", res.token);
+        setIsLoginSuceed(true);
         setLoggedIn(true);
         setEmail(email);
         history.push("/");
@@ -121,8 +124,8 @@ function App() {
     setIsAddPlacePopupOpen(true);
   }
 
-  function handleSetIsInfoTooltipOpen(isSubmitSucceed) {
-    setIsSubmitSucceed(isSubmitSucceed);
+  function handleSetIsInfoTooltipOpen(isAuthSubmitSucceed) {
+    setIsAuthSubmitSucceed(isAuthSubmitSucceed);
     setIsInfoTooltipOpen(true);
   }
 
@@ -136,7 +139,7 @@ function App() {
 
   function closeInfoToolTip() {
     setIsInfoTooltipOpen(false);
-    if (isSubmitSucceed) {
+    if (isAuthSubmitSucceed) {
       history.push("/sign-in");
     }
   }
@@ -257,13 +260,13 @@ function App() {
             <Register onRegister={handleRegister} />
             <InfoTooltip
               name="info-tooltip"
-              isSubmitSucceed={isSubmitSucceed}
+              isAuthSubmitSucceed={isAuthSubmitSucceed}
               isOpen={isInfoTooltipOpen}
               onClose={closeInfoToolTip}
             />
           </Route>
           <Route path="/sign-in">
-            <Login onLogin={handleLogin} />
+            <Login onLogin={handleLogin} isLoginSucceed={isLoginSucceed} />
           </Route>
         </Switch>
         <Footer />

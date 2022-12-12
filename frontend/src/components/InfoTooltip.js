@@ -2,11 +2,11 @@ import successLogo from '../images/Union.svg'
 import errorLogo from '../images/Error.svg'
 
 
-function InfoTooltip({ name, isOpen, onClose, isSubmitSucceed }) {
+function InfoTooltip({ name, isOpen, onClose, isAuthSubmitSucceed }) {
     let infoToolTipLogo;
     let infoToolTipText;
 
-    if (isSubmitSucceed) {
+    if (isAuthSubmitSucceed) {
         infoToolTipLogo = successLogo;
         infoToolTipText = 'Вы успешно зарегистрировались!'
     }

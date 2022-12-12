@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
-export default function Login({ onLogin }) {
+export default function Login({ onLogin, isLoginSucceed }) {
   const {
     register,
     reset,
@@ -47,9 +47,8 @@ export default function Login({ onLogin }) {
             type="email"
           />
           <span
-            className={`form__item-error ${
-              errors?.email && "form__item-error_active"
-            }`}
+            className={`form__item-error ${errors?.email && "form__item-error_active"
+              }`}
           >
             {errors?.email?.message}
           </span>
@@ -68,14 +67,14 @@ export default function Login({ onLogin }) {
             type="password"
           />
           <span
-            className={`form__item-error ${
-              errors?.password && "form__item-error_active"
-            }`}
+            className={`form__item-error ${errors?.password && "form__item-error_active"
+              }`}
           >
             {errors?.password?.message}
+            {isLoginSucceed === false && 'Неправильный логин или пароль'}
           </span>
         </label>
-      <button className={`login__form-button auth__form-button ${isValid ? "" : "form__button_inactive"}`} type="submit">
+        <button className={`login__form-button auth__form-button ${isValid ? "" : "form__button_inactive"}`} type="submit">
           Войти
         </button>
       </form>

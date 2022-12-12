@@ -1,17 +1,11 @@
 .footer {
   max-width: 880px;
-  margin: 0 auto 0 auto;
-}
-
-@media screen and (max-width:940px) {
-  .footer {
-    margin: 0 auto 0 8.44%;
-  }
+  margin: 0 auto;
+  background-color: black;
 }
 
 @media screen and (max-width:320px) {
   .footer {
     max-width: 282px;
-    margin: 0 auto 0 auto;
   }
 }
